@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        
+        /* .form-control:focus {
+            outline: none;
+        } */
+
+        /* Labels and placeholders */
+        /* label {
+            position: absolute;
+            top: 14px;
+            left: 10px;
+            transition: 0.3s;
+            color: #999;
+            font-size: 16px;
+        } */
+
+        /* .form-control:focus+label,
+        .form-control:not(:placeholder-shown)+label {
+            top: -12px;
+            left: 0;
+            font-size: 12px;
+            color: #333;
+        } */
+
+        /* Highlight & bar effect */
+        /* .highlight {
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    top: 38px;
+    left: 0;
+    background: #007BFF;
+    transition: 0.3s;
+} */
+
+        /* .bar {
+            position: relative;
+            display: block;
+            width: 100%;
+        } */
+
+        /* .form-control:focus~.highlight {
+            background: #007BFF;
+        } */
+    </style>
+</head>
+<body>
+    <p><a href="#" id="openAddressModal">+ Add your Address here</a></p>
+
+    <!-- Address Form Section (Initially Hidden) -->
+    <div class="address-modal" id="addressModal">
+        <form>
+            <h2>Add Your Address</h2>
+            <!-- Address input fields -->
+            <div>
+                <label for="street">Street:</label>
+                <input type="text" id="street">
+            </div>
+            <!-- Other address fields -->
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        // JavaScript to handle opening the address form as a modal
+        document.getElementById('openAddressModal').addEventListener('click', function () {
+            var modal = document.getElementById('addressModal');
+            modal.style.display = 'block';
+            document.body.classList.add('blurred-background');
+        });
+
+        // Close the modal when clicking outside the form
+        document.addEventListener('click', function (event) {
+            var modal = document.getElementById('addressModal');
+            if (event.target === modal) {
+                modal.style.display = 'none';
+                document.body.classList.remove('blurred-background');
+            }
+        });
+    </script>
+
+
+<form class="w3-container form-horizontal">
+    <h2>Animated Inputs</h2>
+    <!-- <input class="w3-input w3-animate-input" type="text" placeholder="hi" style="width:135px"><br> -->
+    <input class="w3-input w3-border w3-animate-input" type="text" placeholder="hi" style="width:30%">
+    <input class="w3-input w3-border w3-animate-input" type="text" placeholder="hey" style="width:30%">
+    <input class="w3-input w3-border w3-animate-input" type="text" placeholder="hello" style="width:30%">
+    <textarea class="w3-input w3-border w3-animate-input" type="text" placeholder="hi" style="width:30%">
+    
+    </form>
+
+    <!-- <div class="container">
+        <h2>+ Add Your Address Here</h2>
+        <form class="form-horizontal">
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="email">Email:</label>
+            <div class="col-sm-10">
+              <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="pwd">Password:</label>
+            <div class="col-sm-10">          
+              <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+            </div>
+          </div>
+          <div class="form-group">        
+            <div class="col-sm-offset-2 col-sm-10">
+              <div class="checkbox">
+                <label><input type="checkbox" name="remember"> Remember me</label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">        
+            <div class="col-sm-offset-2 col-sm-10">
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+          </div>
+        </form>
+      </div> -->
+
+     
+
+
+        <!-- <div class="container">
+            <h2>Address Details</h2>
+            <form>
+                <div class="form-group">
+                    <input type="text" class="form-control" required>
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label>fullname (Required)</label>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" required>
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label>phone number (Required)</label>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" required>
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label>pincode (Required)</label>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" required>
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label>state (Required)</label>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" required>
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label>city (Required)</label>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" required>
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label>house no (Required)</label>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" required>
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label>road name (Required)</label>
+                </div>
+            </form>
+        </div> -->
+
+        
+</body>
+</html>
