@@ -13,47 +13,46 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <style>
+        /* Background design */
+        body {
+            background: linear-gradient(to bottom, #c9e2e5, #f8f9fa);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Add some custom styles for the success message */
+        .success-message {
+            text-align: center;
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .success-icon {
+            font-size: 72px;
+            color: green;
+        }
+
+        .success-text {
+            font-size: 36px;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 
 <body>
-    <div>
-        <div id="buynowfullnameid"></div>
-        <div id="buynowphonenumid"></div>
-        <div id="buynowpincodeid"></div>
-        <div id="buynowcityid"></div>
-        <div id="buynowstateid"></div>
-        <div id="buynowhouseid"></div>
-        <div id="buynowroadnameid"></div>
+    <!-- Placeholder for the successful order message -->
+    <div class="success-message">
+        <i class="fa fa-check-circle success-icon"></i>
+        <p class="success-text">Your order is successful!</p>
     </div>
-    <!-- Add this script in the <body> section of your buynowpage.html page -->
-<!-- <script>
-    // Retrieve data from local storage
-    const fullName = localStorage.getItem('fullName');
-    const phoneNumber = localStorage.getItem('phoneNumber');
-    const pinCode = localStorage.getItem('pinCode');
-    const city = localStorage.getItem('city');
-    const state = localStorage.getItem('state');
-    const houseNumber = localStorage.getItem('houseNumber');
-    const roadName = localStorage.getItem('roadName');
-
-    // Display the retrieved data
-    document.getElementById('buynowfullnameid').textContent = `Full Name: ${fullName}`;
-    document.getElementById('buynowphonenumid').textContent = `Phone Number: ${phoneNumber}`;
-    document.getElementById('buynowpincodeid').textContent = `Pincode: ${pinCode}`;
-    document.getElementById('buynowcityid').textContent = `City: ${city}`;
-    document.getElementById('buynowstateid').textContent = `State: ${state}`;
-    document.getElementById('buynowhouseid').textContent = `House No, Building Name: ${houseNumber}`;
-    document.getElementById('buynowroadnameid').textContent = `Road Name, Area, Colony: ${roadName}`;
-</script> -->
-
-    <script>
-        // Read URL parameters
-const urlParams = new URLSearchParams(window.location.search);
-const fullName = urlParams.get('fullName');
-// Get other parameters...
-
-    </script>
-
 </body>
 
 </html>
